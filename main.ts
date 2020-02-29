@@ -24,7 +24,7 @@ input.onButtonPressed(Button.A, function () {
     release_ball()
 })
 let targetString = ""
-radio.setGroup(30)
+radio.setGroup(10)
 pins.analogSetPeriod(AnalogPin.P4, 20000)
 pins.servoSetPulse(AnalogPin.P4, 2000)
 basic.showIcon(IconNames.Yes)
