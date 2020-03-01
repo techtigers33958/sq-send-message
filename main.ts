@@ -1,3 +1,7 @@
+function reset () {
+    targetString = "hello world"
+    basic.showIcon(IconNames.Square)
+}
 function release_ball () {
     pins.servoWritePin(AnalogPin.P4, 45)
     basic.pause(1000)
@@ -17,10 +21,6 @@ radio.onReceivedString(function (receivedString) {
 input.onButtonPressed(Button.B, function () {
     reset()
 })
-function reset () {
-    targetString = "hello world"
-    basic.showIcon(IconNames.Square)
-}
 input.onButtonPressed(Button.A, function () {
     release_ball()
 })
