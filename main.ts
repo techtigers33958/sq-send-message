@@ -6,7 +6,7 @@ radio.onReceivedString(function (receivedString) {
     // -does this if challenge is left half done
     //
     //
-    // Else, checks if 
+    // Else, checks if
     //
     // receivedString = targetString
     //
@@ -26,7 +26,7 @@ radio.onReceivedString(function (receivedString) {
 })
 // Drops the ball:
 //
-// -pushes ball 
+// -pushes ball
 //
 // -waits 1 sec
 //
