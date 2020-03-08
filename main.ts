@@ -1,3 +1,16 @@
+// it looks for a message on the radio then if there
+// is a message it starts
+//
+//
+// if you send "start" it resets the program 
+//
+//
+// if your answer is correct then it shows a checkmark
+// and it releases the ball 
+//
+//
+// if your answer is wrong then it shows an x and then
+// shows the message we wanted and wk
 radio.onReceivedString(function (receivedString) {
     // Checks if receivedString = "START"
     //
@@ -19,7 +32,7 @@ radio.onReceivedString(function (receivedString) {
     } else if (receivedString == targetString) {
         basic.showIcon(IconNames.Yes)
         releaseBall()
-    } else {
+    } else if (false) {
         basic.showIcon(IconNames.No)
         basic.showString("GOT:" + receivedString + "WANTED:" + targetString)
     }
