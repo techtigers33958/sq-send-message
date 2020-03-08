@@ -1,31 +1,70 @@
 // it looks for a message on the radio then if there
+//
+//
 // is a message it starts
 //
 //
-// if you send "start" it resets the program 
+//
+//
+//
+//
+// if you send "start" it resets the program
+//
+//
+//
+//
 //
 //
 // if your answer is correct then it shows a checkmark
-// and it releases the ball 
+//
+//
+// and it releases the ball
+//
+//
+//
+//
 //
 //
 // if your answer is wrong then it shows an x and then
+//
+//
 // shows the message we wanted and wk
 radio.onReceivedString(function (receivedString) {
     // Checks if receivedString = "START"
     //
+    //
+    //
+    //
     // -if yes, program resets
+    //
+    //
+    //
     //
     // -does this if challenge is left half done
     //
     //
+    //
+    //
+    //
+    //
     // Else, checks if
+    //
+    //
+    //
     //
     // receivedString = targetString
     //
+    //
+    //
+    //
     // -if yes, shows check icon and releases ball
     //
+    //
+    //
+    //
     // -if no, shows "x" icon and displays message: GOT:
+    //
+    //
     // START, WANTED: HELLO WORLD.
     if (receivedString == "START") {
         reset()
@@ -39,9 +78,18 @@ radio.onReceivedString(function (receivedString) {
 })
 // Drops the ball:
 //
+//
+//
+//
 // -pushes ball
 //
+//
+//
+//
 // -waits 1 sec
+//
+//
+//
 //
 // -moves motor back
 function releaseBall () {
@@ -51,22 +99,28 @@ function releaseBall () {
 }
 // For manual control:
 //
+//
+//
+//
 // -resets the program on demand
 input.onButtonPressed(Button.B, function () {
     reset()
 })
 // Resets the program:
 //
+//
+//
+//
 // -sets targetString to "hello world"
+//
+//
+//
 //
 // -sets icon to diamond
 function reset () {
-    targetString = "HELLO WORLD"
+    targetString = "hello world"
     basic.showIcon(IconNames.Diamond)
 }
-// For manual control:
-//
-// -releases the ball on demand if it jams in tube.
 input.onButtonPressed(Button.A, function () {
     releaseBall()
 })
